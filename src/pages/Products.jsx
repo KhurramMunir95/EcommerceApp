@@ -5,7 +5,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 const Products = () => {
 
-    const { products } = useSelector((store) => store.products);
+    const { products } = useSelector((state) => state.products);
 
     return (
         <>

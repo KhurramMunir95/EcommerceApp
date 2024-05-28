@@ -1,0 +1,15 @@
+/* header */
+.main-header {
+    background: linear-gradient(45deg, #300aa3, #300aa2d4);
+}
+
+.cart-icon {
+    color: #fff;
+    font-size: 30px;
+}
+
+.main-header .cart-count {
+    position: relative;
+    top: -5px;
+    margin-left: 3px;
+}
