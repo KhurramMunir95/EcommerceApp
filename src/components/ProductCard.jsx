@@ -9,24 +9,25 @@ const ProductCard = ({ item }) => {
   const dispatch = useDispatch();
   
   const addToCart = (item) => {
-    setCount(1);
-    dispatch(addItem(item))
-    dispatch(decreaseQuantity(item));
+    setCount(1); //showing product quantity
+    dispatch(addItem(item)) //adding item to the cart
+    dispatch(decreaseQuantity(item)); //decreasing product quantity from cart
   }
 
   // decrease product count
   const decreaseFromCart = (item) => {
-    setCount(count - 1);
-    dispatch(decreaseItem(item));
-    dispatch(increaseQuantity(item));
+    setCount(count - 1); //showing product quantity
+    dispatch(decreaseItem(item)); //decreasing product quantity from cart
+    dispatch(increaseQuantity(item)); //increasing product stock in products
   }
 
   // increase product count
   const addMoreToCart = (item) => { 
-    setCount(count + 1);
+    setCount(count + 1); //showing product quantity
+    // checking if stock is available
     if(count !== item.stock) {
-      dispatch(increaseItem(item));
-      dispatch(decreaseQuantity(item));
+      dispatch(increaseItem(item)); //increasing product quantity in cart or adding more quantity
+      dispatch(decreaseQuantity(item)); //decreasing product stock in products
     }
   }
 
