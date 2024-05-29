@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux';
 
 const Header = () => {
     const cartLength = useSelector((store) => store.cart.cartItems.length)
-    console.log(cartLength)
     return (
     <Navbar className="main-header">
         <Container>
