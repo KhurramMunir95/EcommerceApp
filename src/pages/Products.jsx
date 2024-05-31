@@ -8,18 +8,20 @@ const Products = () => {
     const { products } = useSelector((state) => state.products);
 
     return (
-        <>
-            <Container>
-                <Row>
-                {
-                    products.map((item) => (
-                        <Col md={4} key={item.id}>
-                            <ProductCard item={item} />
-                        </Col>
-                    ))
-                }
-                </Row>
-            </Container>
+        <> 
+            <section>
+                <Container>
+                    <Row>
+                    {
+                        products.map((item) => (
+                            <Col md={4} key={item.id}>
+                                <ProductCard item={item} />
+                            </Col>
+                        ))
+                    }
+                    </Row>
+                </Container>
+            </section>
         </>
     )
 }
